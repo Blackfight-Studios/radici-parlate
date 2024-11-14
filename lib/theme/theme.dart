@@ -47,3 +47,22 @@ final ThemeData appTheme = ThemeData(
   useMaterial3: true,
   scaffoldBackgroundColor: appColorScheme.background,
 );
+
+class AppIcons {
+  static const String home = "assets/icons/home.png";
+  static const String dictionary = "assets/icons/dictionary.png";
+  static const String map = "assets/icons/map.png";
+  static const String tradition = "assets/icons/tradition.png";
+  static const String user = "assets/icons/user.png";
+
+
+  static Widget icon(String path, {double size = 24.0, Color color = backgroundColor}) {
+    return Image.asset(
+      path,
+      width: size,
+      height: size,
+      color: color,
+    );
+  }
+
+}

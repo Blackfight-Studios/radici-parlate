@@ -70,6 +70,11 @@ flutter:
   # https://flutter.dev/to/asset-from-package
   assets:
     - assets/fonts/
+    - assets/icons/home.png
+    - assets/icons/dictionary.png
+    - assets/icons/map.png
+    - assets/icons/tradition.png
+    - assets/icons/user.png
   fonts:
     - family: Rokkitt
       fonts:
