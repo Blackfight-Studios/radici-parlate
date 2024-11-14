@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:radici_parlate/pages/home.dart';
 import 'package:radici_parlate/theme/theme.dart';
-import 'package:radici_parlate/widgets/navigation/center_button.dart';
 import 'package:radici_parlate/widgets/navigation/navigation_bar.dart';
 
 void main() {
@@ -49,11 +48,9 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: _pages[_selectedIndexPage],
       bottomNavigationBar: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          padding: const EdgeInsets.all(20),
           child: AppNavigationBar(selectedIndex: _selectedIndexPage, onItemTapped: _onItemTapped),
         ),
-      floatingActionButton: CenterNavigationButton(selectedIndex: _selectedIndexPage, onItemTapped: _onItemTapped),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 
