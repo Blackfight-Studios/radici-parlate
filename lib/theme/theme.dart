@@ -6,18 +6,6 @@ const Color textColor = Color(0xFF2F2F2F);
 const Color textAccentColor = Color(0xFFD4C6B3);
 const Color backgroundColor = Color(0xFFD4C6B3);
 
-final containerDecoration = BoxDecoration(
-  color: primaryColor,
-  borderRadius: BorderRadius.circular(20),
-  boxShadow: const [
-    BoxShadow(
-      color: Colors.black26,
-      blurRadius: 10,
-      offset: Offset(0, 4),
-    ),
-  ],
-);
-
 const ColorScheme appColorScheme = ColorScheme(
   primary: primaryColor,
   primaryContainer: Color(0xFF4F6A55), 
@@ -66,7 +54,7 @@ class AppIcons {
   static const String user = "assets/icons/user.png";
 
 
-  static Widget icon(String path, {double size = 24.0, Color color = backgroundColor}) {
+  static Widget icon(String path, {double size = 45.0, Color color = backgroundColor}) {
     return Image.asset(
       path,
       width: size,
