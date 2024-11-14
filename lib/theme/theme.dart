@@ -14,7 +14,7 @@ const ColorScheme appColorScheme = ColorScheme(
   secondary: AppColors.accentColor,       
   secondaryContainer: Color(0xFF8D6E63),
   background: AppColors.backgroundColor,
-  surface: AppColors.backgroundColor,
+  surface: AppColors.primaryColor,
   onPrimary: AppColors.textAccentColor,
   onSecondary: AppColors.textColor,
   onBackground: AppColors.textColor,
