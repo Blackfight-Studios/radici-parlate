@@ -25,7 +25,7 @@ const ColorScheme appColorScheme = ColorScheme(
 class AppTextStyles {
   static const TextStyle title = TextStyle(
     fontFamily: 'Rokkitt',
-    fontSize: 20.0,
+    fontSize: 50.0,
     fontWeight: FontWeight.bold,
     color: textColor,
   );
