@@ -1,24 +1,34 @@
 import 'package:flutter/material.dart';
 
-class AppColors {
-  static const Color primaryColor = Color(0xFF3B5A40);
-  static const Color accentColor = Color(0xFF795548);
-  static const Color textColor = Color(0xFF2F2F2F);
-  static const Color textAccentColor = Color(0xFFD4C6B3);
-  static const Color backgroundColor = Color(0xFFD4C6B3);
-}
+const Color primaryColor = Color(0xFF3B5A40);
+const Color accentColor = Color(0xFF795548);
+const Color textColor = Color(0xFF2F2F2F);
+const Color textAccentColor = Color(0xFFD4C6B3);
+const Color backgroundColor = Color(0xFFD4C6B3);
+
+final containerDecoration = BoxDecoration(
+  color: primaryColor,
+  borderRadius: BorderRadius.circular(20),
+  boxShadow: const [
+    BoxShadow(
+      color: Colors.black26,
+      blurRadius: 10,
+      offset: Offset(0, 4),
+    ),
+  ],
+);
 
 const ColorScheme appColorScheme = ColorScheme(
-  primary: AppColors.primaryColor,
+  primary: primaryColor,
   primaryContainer: Color(0xFF4F6A55), 
-  secondary: AppColors.accentColor,       
+  secondary: accentColor,
   secondaryContainer: Color(0xFF8D6E63),
-  background: AppColors.backgroundColor,
-  surface: AppColors.primaryColor,
-  onPrimary: AppColors.textAccentColor,
-  onSecondary: AppColors.textColor,
-  onBackground: AppColors.textColor,
-  onSurface: AppColors.textColor,
+  background: backgroundColor,
+  surface: primaryColor,
+  onPrimary: textAccentColor,
+  onSecondary: textColor,
+  onBackground: textColor,
+  onSurface: textColor,
   error: Colors.red,
   onError: Colors.white,
   brightness: Brightness.light,
@@ -29,12 +39,12 @@ class AppTextStyles {
     fontFamily: 'Rokkitt',
     fontSize: 20.0,
     fontWeight: FontWeight.bold,
-    color: AppColors.textColor,
+    color: textColor,
   );
   static const TextStyle body = TextStyle(
     fontFamily: 'Quicksand',
     fontSize: 16.0,
-    color: AppColors.textColor,
+    color: textColor,
   );
 }
 
