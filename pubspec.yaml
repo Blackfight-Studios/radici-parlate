@@ -68,12 +68,14 @@ flutter:
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/to/asset-from-package
+  assets:
+    - assets/fonts/
   fonts:
-    - family: Rokkit
+    - family: Rokkitt
       fonts:
-        - asset: fonts/rokkit/Rokkit-Regular.ttf
-        - asset: fonts/rokkit/Rokkit-Bold.ttf
+        - asset: assets/fonts/rokkitt/Rokkitt-Regular.ttf
+        - asset: assets/fonts/rokkitt/Rokkitt-Bold.ttf
     - family: Quicksand
       fonts:
-        - asset: fonts/quicksand/Quicksand-Regular.ttf
-        - asset: fonts/quicksand/Quicksand-Bold.ttf
+        - asset: assets/fonts/quicksand/Quicksand-Regular.ttf
+        - asset: assets/fonts/quicksand/Quicksand-Bold.ttf
