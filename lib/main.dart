@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:radici_parlate/pages/home.dart';
+import 'package:radici_parlate/screens/home.dart';
 import 'package:radici_parlate/theme/theme.dart';
 import 'package:radici_parlate/widgets/navigation/navigation_bar.dart';
 
@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Radici Parlate',
       theme: appTheme,
       home: const MainPage(),
@@ -36,11 +37,11 @@ class _MainPageState extends State<MainPage> {
   int _selectedIndexPage = 2; // default Home page
 
   final List<Widget> _pages = [
-    const HomePage(),
-    const HomePage(),
-    const HomePage(),
-    const HomePage(),
-    const HomePage(),
+    const HomeScreen(),
+    const HomeScreen(),
+    const HomeScreen(),
+    const HomeScreen(),
+    const HomeScreen(),
   ];
 
   @override
