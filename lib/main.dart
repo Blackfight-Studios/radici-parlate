@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:radici_parlate/pages/home.dart';
 import 'package:radici_parlate/theme/theme.dart';
+import 'package:radici_parlate/widgets/navigation/center_button.dart';
+import 'package:radici_parlate/widgets/navigation/navigation_bar.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,20 +34,26 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
 
-  int _selectedIndexPage = 0;
+  int _selectedIndexPage = 2; // default Home page
 
   final List<Widget> _pages = [
+    const HomePage(),
+    const HomePage(),
+    const HomePage(),
+    const HomePage(),
     const HomePage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          _pages[_selectedIndexPage],
-        ],
-      ),
+      body: _pages[_selectedIndexPage],
+      bottomNavigationBar: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          child: AppNavigationBar(selectedIndex: _selectedIndexPage, onItemTapped: _onItemTapped),
+        ),
+      floatingActionButton: CenterNavigationButton(selectedIndex: _selectedIndexPage, onItemTapped: _onItemTapped),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 
@@ -55,3 +63,5 @@ class _MainPageState extends State<MainPage> {
     });
   }
 }
+
+
