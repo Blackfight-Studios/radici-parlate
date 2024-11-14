@@ -47,11 +47,20 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_selectedIndexPage],
-      bottomNavigationBar: Padding(
-          padding: const EdgeInsets.all(20),
-          child: AppNavigationBar(selectedIndex: _selectedIndexPage, onItemTapped: _onItemTapped),
-        ),
+      extendBody: true,
+      body: Stack(
+        children: [
+          _pages[_selectedIndexPage],
+          Positioned(
+              left: 0,
+              right: 0,
+              bottom: 0,
+              child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: AppNavigationBar(selectedIndex: _selectedIndexPage,
+                      onItemTapped: _onItemTapped))),
+        ],
+      ),
     );
   }
 
