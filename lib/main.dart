@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:radici_parlate/screens/home.dart';
+import 'package:radici_parlate/screens/tradition.dart';
 import 'package:radici_parlate/theme/theme.dart';
 import 'package:radici_parlate/widgets/navigation/navigation_bar.dart';
 
@@ -40,7 +41,7 @@ class _MainPageState extends State<MainPage> {
     const HomeScreen(),
     const HomeScreen(),
     const HomeScreen(),
-    const HomeScreen(),
+    const TraditionScreen(),
     const HomeScreen(),
   ];
 
