@@ -12,6 +12,10 @@ final navigationContainerDecoration = BoxDecoration(
     ),
   ],
 );
+const categoryContainerDecoration = BoxDecoration(
+  color: Colors.transparent
+);
+
 final searchTextFieldDecoration = InputDecoration(
   contentPadding: const EdgeInsets.symmetric(horizontal: 15),
   filled: true,
@@ -21,7 +25,21 @@ final searchTextFieldDecoration = InputDecoration(
     borderSide: BorderSide.none,
   ),
   hintText: "Cercare..." ,
-  hintStyle: TextStyle(fontFamily: "Quicksand", fontSize: 16.0, color: backgroundColor),
-  helperStyle: TextStyle(fontFamily: "Quicksand", fontSize: 16.0, color: backgroundColor),
+  hintStyle: TextStyle(fontFamily: "Quicksand", fontSize: 16.0, color: backgroundColor, fontWeight: FontWeight.normal),
   suffixIcon: Icon(Icons.search, color: backgroundColor,),
 );
+
+BoxDecoration itemCategoryCardContainer(int colorIndex) {
+  List<Color> colors = [primaryColor, accentColor];
+  return BoxDecoration(
+    color: colors[colorIndex],
+    borderRadius: BorderRadius.circular(10),
+    boxShadow: const [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 10,
+        offset: Offset(0, 4),
+      ),
+    ],
+  );
+}

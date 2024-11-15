@@ -37,7 +37,6 @@ class _AppSearchBarState extends State<AppSearchBar>{
       decoration: searchTextFieldDecoration,
       style: TextStyle(fontFamily: "Quicksand", fontSize: 16.0, color: backgroundColor),
       cursorColor: backgroundColor,
-      c
     );
   }
 
