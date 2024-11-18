@@ -12,8 +12,11 @@ final navigationContainerDecoration = BoxDecoration(
     ),
   ],
 );
-const categoryContainerDecoration = BoxDecoration(
+const categoryContainerDecoration =  BoxDecoration(
   color: Colors.transparent
+);
+const gridContainerDecoration = BoxDecoration(
+    color: Colors.transparent
 );
 
 final searchTextFieldDecoration = InputDecoration(
@@ -54,4 +57,16 @@ final BoxDecoration tagDecoration = BoxDecoration(
         offset: Offset(0, 4),
       ),
   ]
+);
+
+final BoxDecoration wordCardContainer = BoxDecoration(
+  color: primaryColor,
+  borderRadius: BorderRadius.circular(10),
+  boxShadow: const [
+    BoxShadow(
+      color: Colors.black26,
+      blurRadius: 10,
+      offset: Offset(0, 4),
+    ),
+  ],
 );
