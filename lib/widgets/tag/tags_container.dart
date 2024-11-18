@@ -12,12 +12,12 @@ class TagsContainer extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return Padding(padding: EdgeInsets.only(bottom: 15), child: SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
         children: getTags(),
       ),
-    );
+    ),);
   }
   
   List<Padding> getTags() {
