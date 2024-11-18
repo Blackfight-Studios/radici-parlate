@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:radici_parlate/screens/dictionary.dart';
 import 'package:radici_parlate/screens/home.dart';
 import 'package:radici_parlate/screens/tradition.dart';
 import 'package:radici_parlate/theme/theme.dart';
@@ -38,7 +39,7 @@ class _MainPageState extends State<MainPage> {
   int _selectedIndexPage = 2; // default Home page
 
   final List<Widget> _pages = [
-    const HomeScreen(),
+    const DictionaryScreen(),
     const HomeScreen(),
     const HomeScreen(),
     const TraditionScreen(),
