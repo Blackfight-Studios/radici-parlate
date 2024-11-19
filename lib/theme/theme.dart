@@ -34,6 +34,24 @@ class AppTextStyles {
     fontSize: 16.0,
     color: textColor,
   );
+  static const TextStyle wordCard = TextStyle(
+    fontFamily: 'Quicksand',
+    fontSize: 16.0,
+    color: textColor,
+    fontWeight: FontWeight.bold
+  );
+  static const TextStyle wordCardSecond = TextStyle(
+    fontFamily: 'Quicksand',
+    fontSize: 16.0,
+    color: backgroundColor,
+    fontWeight: FontWeight.bold
+  );
+  static const TextStyle wordCardThird = TextStyle(
+    fontFamily: 'Quicksand',
+    fontSize: 12.0,
+    color: textColor,
+    fontWeight: FontWeight.bold
+  );
 }
 
 final ThemeData appTheme = ThemeData(

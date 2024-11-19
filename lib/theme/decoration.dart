@@ -63,3 +63,20 @@ final BoxDecoration wordCardContainer = BoxDecoration(
     ),
   ],
 );
+
+final BoxDecoration wordSecondCardContainer = BoxDecoration(
+  color: accentColor,
+  borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10)),
+  boxShadow: const [
+    BoxShadow(
+      color: Colors.black26,
+      blurRadius: 10,
+      offset: Offset(0, 4),
+    ),
+  ],
+);
+
+final BoxDecoration wordTextCardContainer = BoxDecoration(
+  color: backgroundColor,
+  borderRadius: BorderRadius.circular(5),
+);
