@@ -50,13 +50,6 @@ BoxDecoration itemCategoryCardContainer(int colorIndex) {
 final BoxDecoration tagDecoration = BoxDecoration(
   color: accentColor,
   borderRadius: BorderRadius.circular(40),
-    boxShadow: const [
-      BoxShadow(
-        color: Colors.black26,
-        blurRadius: 10,
-        offset: Offset(0, 4),
-      ),
-  ]
 );
 
 final BoxDecoration wordCardContainer = BoxDecoration(
