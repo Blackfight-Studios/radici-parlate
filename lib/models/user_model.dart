@@ -21,7 +21,7 @@ class UserModel {
          username: json["username"] as String,
          email: json["email"] as String,
          password: json["password"] as String,
-         roleId: json["roleId"] as int,
+         roleId: json["role_id"] as int,
          createdAt: DateTime.parse(json['created_at'] as String),
      );
    }
@@ -32,7 +32,7 @@ class UserModel {
       "username": username,
       "email": email,
       "password": password,
-      "roleId": roleId,
+      "role_id": roleId,
       "created_at": createdAt.toIso8601String()
     };
   }
