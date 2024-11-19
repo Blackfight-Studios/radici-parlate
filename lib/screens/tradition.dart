@@ -16,7 +16,8 @@ class _TraditionScreenState extends State<TraditionScreen> {
   Widget build(BuildContext context) {
     String query = "";
     return Scaffold(
-      body: SingleChildScrollView(child: Padding(padding: const EdgeInsets.only(left: 0, right: 0, top: 15, bottom: 100), child: Column(children: [
+      body: SingleChildScrollView(child: Padding(padding: const EdgeInsets.only(top: 15, bottom: 100), child: Column(
+        children: [
         Center(child: Text("Tradizioni", style: Theme.of(context).textTheme.titleMedium,)),
         Padding(padding: const EdgeInsets.only(left: 25, right: 25, top: 30, bottom: 50), child: AppSearchBar(onSearch: (query) {})),
         /** TODO: make dynamic **/
