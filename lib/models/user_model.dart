@@ -1,5 +1,6 @@
-class UserModel {
-  final int id;
+import 'package:radici_parlate/models/model.dart';
+
+class UserModel extends Model{
   final String username;
   final String email;
   final String password;
@@ -7,7 +8,7 @@ class UserModel {
   final DateTime createdAt;
 
    UserModel({
-    required this.id,
+     required super.id,
     required this.username,
     required this.email,
     required this.password,
@@ -26,6 +27,7 @@ class UserModel {
      );
    }
 
+   @override
   Map<String, dynamic> toJson() {
     return {
       "id": id,

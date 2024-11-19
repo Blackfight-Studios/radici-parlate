@@ -1,14 +1,15 @@
 import 'dart:convert';
 
-class RoleModel {
-  final int id;
+import 'package:radici_parlate/models/model.dart';
+
+class RoleModel extends Model {
   final String name;
   final List<String> permissions;
 
   RoleModel({
-    required this.id,
+    required super.id,
     required this.name,
-    required this.permissions
+    required this.permissions,
   });
 
   factory RoleModel.fromJson(Map<String, dynamic> json){
@@ -19,6 +20,7 @@ class RoleModel {
     );
   }
 
+  @override
   Map<String, dynamic> toJson() {
     return {
       "id": id,

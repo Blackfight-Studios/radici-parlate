@@ -1,5 +1,6 @@
-class TraditionModel {
-  final int id;
+import 'package:radici_parlate/models/model.dart';
+
+class TraditionModel extends Model{
   final String name;
   final String summary;
   final String description;
@@ -8,7 +9,7 @@ class TraditionModel {
   final DateTime updatedAt;
 
   TraditionModel({
-    required this.id,
+    required super.id,
     required this.name,
     required this.summary,
     required this.description,
@@ -29,6 +30,7 @@ class TraditionModel {
     );
   }
 
+  @override
   Map<String, dynamic> toJson(){
     return {
       "id": id,

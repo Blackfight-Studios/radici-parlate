@@ -1,8 +1,8 @@
+import 'package:radici_parlate/models/model.dart';
 import 'package:radici_parlate/utils/gender_enum.dart';
 import 'package:radici_parlate/utils/type_enum.dart';
 
-class WordModel {
-  final int id;
+class WordModel extends Model{
   final String word;
   final String translation;
   final String description;
@@ -13,7 +13,7 @@ class WordModel {
   final DateTime updatedAt;
 
   WordModel({
-    required this.id,
+    required super.id,
     required this.word,
     required this.translation,
     required this.description,
@@ -38,6 +38,7 @@ class WordModel {
     );
   }
 
+  @override
   Map<String, dynamic> toJson(){
     return {
       "id": id,
