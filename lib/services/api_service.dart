@@ -79,7 +79,7 @@ abstract class ApiService<T extends Model> {
   }
 
   Future<bool> checkExists(String endpoint, Map<String, dynamic> queryParams) async {
-    var url = Uri.https(base, endpoint, queryParams);
+    var url = Uri.https(base, "$endpoint/checkExists", queryParams);
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
@@ -92,7 +92,7 @@ abstract class ApiService<T extends Model> {
   }
 
   Future<List<T>> search(String endpoint, Map<String, dynamic> queryParams, T Function(Map<String, dynamic>) fromJson) async {
-    var url = Uri.https(base, endpoint, queryParams);
+    var url = Uri.https(base, "$endpoint/search", queryParams);
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
@@ -116,7 +116,7 @@ abstract class ApiService<T extends Model> {
   }
 
   Future<List<T>> getPage(String endpoint, int page, int pageSize, T Function(Map<String, dynamic>) fromJson) async {
-    var url = Uri.https(base, endpoint, {'page': page.toString(), 'pageSize': pageSize.toString()});
+    var url = Uri.https(base, "$endpoint/getPage", {'page': page.toString(), 'pageSize': pageSize.toString()});
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
@@ -128,7 +128,7 @@ abstract class ApiService<T extends Model> {
   }
 
   Future<void> createBatch(String endpoint, List<T> models) async {
-    var url = Uri.https(base, endpoint);
+    var url = Uri.https(base, "$endpoint/createBatch");
     final response = await http.post(
       url,
       headers: {"Content-Type": "application/json"},
