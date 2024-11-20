@@ -21,6 +21,7 @@ class GridContainer extends StatelessWidget {
         children: [
           Padding(padding: const EdgeInsets.only(left: 20, bottom: 10), child: Text(gridTitle, style: TextStyle(fontSize: 30, fontFamily: "Rokkitt", fontWeight: FontWeight.normal))),
           GridView.builder(
+            padding: EdgeInsets.symmetric(horizontal: 20),
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

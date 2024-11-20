@@ -8,7 +8,7 @@ class WordCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: const EdgeInsets.only(right: 5, left: 5),
+    return Padding(padding: const EdgeInsets.only(right: 10, left: 10),
       child: Container(
         constraints: const BoxConstraints(
           maxHeight: 100,
