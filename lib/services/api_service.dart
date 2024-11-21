@@ -57,7 +57,7 @@ abstract class ApiService<T extends Model> {
   }
 
   Future<void> delete(String endpoint, int id) async {
-    var url = Uri.https(base, '$endpoint/$id');
+    var url = Uri.https(base, '$endpoint/delete/$id');
     final response = await http.delete(url);
 
     if (response.statusCode != 200) {
@@ -66,7 +66,7 @@ abstract class ApiService<T extends Model> {
   }
 
   Future<void> patch(String endpoint, int id, Map<String, dynamic> fieldsToUpdate) async {
-    var url = Uri.https(base, '$endpoint/$id');
+    var url = Uri.https(base, '$endpoint/patch/$id');
     final response = await http.patch(
       url,
       headers: {"Content-Type": "application/json"},
