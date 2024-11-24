@@ -11,6 +11,8 @@ class WordModel extends Model{
   final String plural;
   final DateTime createdAt;
   final DateTime updatedAt;
+  final int lastModifiedBy;
+  final double version;
 
   WordModel({
     required super.id,
@@ -21,7 +23,9 @@ class WordModel extends Model{
     required this.type,
     required this.plural,
     required this.createdAt,
-    required this.updatedAt
+    required this.updatedAt,
+    required this.lastModifiedBy,
+    required this.version
   });
 
   factory WordModel.fromJson(Map<String, dynamic> json){
@@ -34,7 +38,9 @@ class WordModel extends Model{
         type: TypeEnum.fromString(json["type"] as String),
         plural: json["plural"],
         createdAt: DateTime.parse(json['created_at'] as String),
-        updatedAt: DateTime.parse(json['updated_at'] as String)
+        updatedAt: DateTime.parse(json['updated_at'] as String),
+        lastModifiedBy: json["last_modified_by"] as int,
+        version: json["version"] as double
     );
   }
 
@@ -50,6 +56,8 @@ class WordModel extends Model{
       "plural": plural,
       "created_at": createdAt.toIso8601String(),
       "updated_at": updatedAt.toIso8601String(),
+      "last_modified_by": lastModifiedBy,
+      "version": version
     };
   }
 
